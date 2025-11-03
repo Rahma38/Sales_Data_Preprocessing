@@ -1,53 +1,53 @@
-# 🧹 Data Cleaning & Preprocessing Report
+# 🧹 Data Cleaning & Preprocessing
 
-This repository demonstrates the data cleaning and preprocessing steps applied on a raw dataset to prepare it for analysis. The cleaning process included handling missing values, removing duplicates, standardizing columns, fixing data types, and treating outliers.
-
----
-
-## 🔹 Key Cleaning Steps
-
-### 1️⃣ Handling Missing Values
-- Removed **NULL or empty values** from important columns like Customer Name.
-- Cleaned the Ship Date column where some dates were missing or incorrect.
-
-### 2️⃣ Removing Duplicates
-- Identified and remoduplicate rowsws** across the dataset.
-
-### 3️⃣ Standardizing Columns
-- Standardized the Country column usVLOOKUPUP** to unify country names.
-- Unified the Order Date formatdd/mm/yyyyyy** and ensured consistdata typepe**.
-
-### 4️⃣ Correcting Ship Dates
-- Fixed Ship Date to be **3 days after Order Date** wherever applicable.
-- Removed incorrect or missing dates.
-
-### 5️⃣ Cleaning Quantity & Unit Quantityantity**: Removed negative and unrealistic large vaUnit Price Price*ISNUMBER()MBER()** to detect invalid entries and replaced them wmedianmedian** value.
-
-### 6️⃣ Handling Outliers in Total
-- Calculafive-number summaryummary**: Min, Q1, Median, Q3, Max.
-- CIQR **IQR** and detlower & upper boundsbounds**.
-- Treated values outside booutlierstliers**.
+This repository showcases the data cleaning and preprocessing steps applied to a raw dataset to make it ready for analysis. The cleaning process includes handling missing values, removing duplicates, standardizing columns, correcting data types, and treating outliers.
 
 ---
 
-## 📊 Cleaning Summary by Column
+## 🔹 Key Steps Performed
 
-| Column        | Steps Applied                                                                 |
-|---------------|-------------------------------------------------------------------------------|
-| Customer Name | Removed null values                                                            |
-| Country       | Standardized using VLOOKUP                                                    |
-| Order Date    | Unified format (dd/mm/yyyy) & fixed data type                                  |
-| Ship Date     | Corrected to 3 days after Order Date & removed wrong/missing entries          |
-| Quantity      | Removed negative & unrealistic large values                                   |
-| Unit Price    | Removed invalid entries (non-numeric) & replaced with median                  |
-| Total         | Outlier detection using IQR & five-number summary                             |
-| Entire Data   | Removed duplicates, ensured consistency & readiness for analysis              |
+### 1️⃣ Handle Missing Values
+- Removed NULL or empty values in important columns such as Customer Name.
+- Fixed missing or incorrect entries in Ship Date.
+
+### 2️⃣ Remove Duplicates
+- Identified and removed duplicate rows to ensure data integrity.
+
+### 3️⃣ Standardize Columns
+- Standardized Country names using VLOOKUP.
+- Unified Order Date format to dd/mm/yyyy and fixed data types.
+
+### 4️⃣ Correct Ship Dates
+- Adjusted Ship Date to be **3 days after Order Date** wherever needed.
+- Removed wrong or missing dates.
+
+### 5️⃣ Clean Quantity & Unit PricQuantityty**: Removed negative or unrealistic large valuesUnit Pricece**: UISNUMBER()()** to detect invalid entries and replaced them with medianan**.
+
+### 6️⃣ Handle Outliers in Total
+- Calculafive-number summaryry**: Min, Q1, Median, Q3, Max.
+- CompuIQRQR** to determlower and upper boundsds**.
+- Replaced or treated values outside boundsoutliersrs**.
 
 ---
 
-## 🛠 Tools & FunctionsExcel Functions:tions:** ISNUMBER(), VLOOKUP(), MEDIAN()
+## 📊 Summary by Column
+
+| Column        | Cleaning Steps Applied                                           |
+|---------------|-----------------------------------------------------------------|
+| Customer Name | Removed null values                                              |
+| Country       | Standardized using VLOOKUP                                       |
+| Order Date    | Unified format (dd/mm/yyyy) & corrected data type                |
+| Ship Date     | Corrected to 3 days after Order Date & removed wrong/missing     |
+| Quantity      | Removed negative & unrealistic large values                     |
+| Unit Price    | Removed invalid entries & replaced with median                  |
+| Total         | Detected outliers using IQR & five-number summary               |
+| Entire Data   | Removed duplicates, ensured consistency & readiness for analysis|
+
+---
+
+## 🛠 Tools & Functions UseExcel Functions:s:** ISNUMBER(), VLOOKUP(), MEDIAN()
 - **Techniques:** Outlier detection, IQR calculation, data type standardization, duplicate removal
 
 ---
 
-✅ The dataset is now cleaned and ready for analysis or visualization with consistent, reliable data.
+✅ The dataset is now cleaned, consistent, and ready for analysis or visualization.
